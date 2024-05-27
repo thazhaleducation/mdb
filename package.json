@@ -1,0 +1,15 @@
+{
+  "name": "mdb",
+  "version": "1.0.0",
+  "description": "Api server for movie database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./app/server.js",
+    "test": "npm test"
+  },
+  "author": "thazhalmenporul",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
