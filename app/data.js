@@ -1,10 +1,6 @@
 const movies = [
-  {
-    name: 'Rasavathi'
-  },
-  {
-    name: 'Star'
-  }
+  { name: 'Rasavathi' },
+  { name: 'Star' }
 ];
 
 module.exports = {
