@@ -1,20 +1,9 @@
-const mysql = require('mysql');
+const { Sequelize } = require('sequelize');
 
-const connection = mysql.createConnection({
+const sequelize = new Sequelize('mdb', 'root', 'passc0de', {
   host: '127.0.0.1',
-  user: 'root',
-  password: 'passc0de',
-  database: 'mdb'
+  port: 3306,
+  dialect: 'mysql'
 });
 
-connection.connect();
-
-module.exports = connection;
-
-// connection.query("select * from movies", (err, rows, fields) => {
-//   if (err) throw err;
-  
-//   console.log(rows[1]);
-// });
-
-// connection.end();
+module.exports = sequelize;
