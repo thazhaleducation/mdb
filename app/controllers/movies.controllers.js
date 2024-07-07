@@ -13,7 +13,16 @@ const findByName = (req, res) => {
   });
 }
 
+const create = (req, res) => {
+  const movieToCreate = req.body;
+  console.log(movieToCreate);
+  Movie.create(movieToCreate).then(() => {
+    res.status(201).send({"message": "Movie created successfully"});
+  });
+}
+
 module.exports = {
   all,
-  findByName
+  findByName,
+  create
 }

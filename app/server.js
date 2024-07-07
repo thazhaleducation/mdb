@@ -4,6 +4,7 @@ const app = express();
 const sequelize = require('./db');
 const port = 3000
 
+app.use(express.json());
 app.use('/movies', routes.moviesRoutes);
 
 app.listen(port, () => {
