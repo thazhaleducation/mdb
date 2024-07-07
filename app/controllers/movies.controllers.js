@@ -21,8 +21,17 @@ const create = (req, res) => {
   });
 }
 
+const deleteByName = (req, res) => {
+  const name = req.params.name;
+  Movie.destroy({where: { name }}).then(() => {
+    res.status(204).send();
+  })
+}
+
+
 module.exports = {
   all,
   findByName,
-  create
+  create,
+  deleteByName
 }
