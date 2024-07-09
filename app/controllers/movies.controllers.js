@@ -28,10 +28,25 @@ const deleteByName = (req, res) => {
   })
 }
 
+const update = (req, res) => {
+  const id = req.params.id;
+  const updates = req.body;
+
+  console.log(id);
+  console.log(updates);
+  Movie.update(
+    {...updates},
+    {where: {id}}
+  ).then((rows_updated) => {
+    res.status(204).send();
+  });
+  
+}
 
 module.exports = {
   all,
   findByName,
   create,
-  deleteByName
+  deleteByName,
+  update
 }
